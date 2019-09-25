@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#eee"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:padding="5dp"
+        android:selectAllOnFocus="true"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/genderSpinner"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        app:layout_constraintStart_toStartOf="@+id/weightField"
+        app:layout_constraintTop_toBottomOf="@+id/weightField"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/heightField"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        android:ems="10"
+        android:hint="Height(cm)"
+        android:inputType="number"
+        android:padding="5dp"
+        android:selectAllOnFocus="true"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    <TextView
+        android:id="@+id/caloriesField"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/activitySpinner"
+        app:layout_constraintTop_toBottomOf="@+id/activitySpinner" />
+
+    <EditText
+        android:id="@+id/weightField"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        android:ems="10"
+        android:hint="Weight(kg)"
+        android:inputType="number"
+        android:padding="5dp"
+        android:selectAllOnFocus="true"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/heightField"
+        app:layout_constraintTop_toBottomOf="@+id/heightField" />
+
+    <Spinner
+        android:id="@+id/activitySpinner"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#eee"
+        app:layout_constraintStart_toStartOf="@+id/genderSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinner"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:onClick="calculate"
+        android:text="Calculate"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/caloriesField"
+        app:layout_constraintTop_toBottomOf="@+id/caloriesField"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Calories"
+        app:layout_constraintStart_toEndOf="@+id/caloriesField"
+        app:layout_constraintTop_toBottomOf="@+id/activitySpinner" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:onClick="calculateCalories"-->
+<!--        android:text="Button"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/calcButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/calcButton" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:onClick="gipgip"-->
+<!--        android:text="gipgip"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/button2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button2" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Age"
+        app:layout_constraintStart_toEndOf="@+id/age"
+        app:layout_constraintTop_toTopOf="@+id/age" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Height"
+        app:layout_constraintStart_toEndOf="@+id/heightField"
+        app:layout_constraintTop_toTopOf="@+id/heightField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Weight"
+        app:layout_constraintStart_toEndOf="@+id/weightField"
+        app:layout_constraintTop_toTopOf="@+id/weightField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Gender"
+        app:layout_constraintStart_toEndOf="@+id/genderSpinner"
+        app:layout_constraintTop_toTopOf="@+id/genderSpinner" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Activities"
+        app:layout_constraintStart_toEndOf="@+id/activitySpinner"
+        app:layout_constraintTop_toTopOf="@+id/activitySpinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
