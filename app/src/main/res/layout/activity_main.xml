@@ -175,7 +175,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:text="Activities"
+        android:text="Activity"
         app:layout_constraintStart_toEndOf="@+id/activitySpinner"
         app:layout_constraintTop_toTopOf="@+id/activitySpinner" />
 
